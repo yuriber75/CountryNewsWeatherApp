@@ -35,13 +35,19 @@ export class AllCountriesPage implements OnInit {
 
 
     for (const country of this.countriesInfo.data) {
-      this.countriesDetail.push({flag: country.flags.png, name: country.name.official, cca2: country.cca2, capital: country.capital});
+      this.countriesDetail.push({
+        flag: country.flags.png, 
+        name: country.name.official, 
+        cca2: country.cca2, 
+        capital: country.capital
+      });
     }
 
   }
 
-  async openNewsCountry(cca2: string) {
-    await this.ds.set('selecetedCountry', cca2);
+  async openNewsCountry(cca2: string, name: string) {
+    await this.ds.set('selectedCountry', cca2);
+    await this.ds.set('nameCountry', name);
     this.router.navigate(['/news'])
   }
 
@@ -54,5 +60,5 @@ export class AllCountriesPage implements OnInit {
 }
 
 
-//https://newsdata.io/api/1/latest?apikey=pub_617162d08e23202339fbaa0c5d654ec26eb54&country=COUNTRY_CCA2_CODE
+
 
