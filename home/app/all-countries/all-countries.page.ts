@@ -10,12 +10,13 @@ import { HttpOptions } from '@capacitor/core';
   selector: 'app-all-countries',
   templateUrl: './all-countries.page.html',
   standalone: true,
-  imports: [IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonCard, IonCardSubtitle, IonCardTitle, IonCardHeader, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class AllCountriesPage implements OnInit {
 
   keyword: string = "";
   countriesInfo!: any;
+  countriesDetail: { flag: string; name: string }[] = [];
   options: HttpOptions = {
     url: "https://restcountries.com/v3.1/name/"
   }
@@ -27,10 +28,15 @@ export class AllCountriesPage implements OnInit {
   }
 
   async getKW() {
-    this. keyword = await this.ds.get('kw');
+    this.keyword = await this.ds.get('kw');
     this.options.url = this.options.url.concat(this.keyword);
-    this.countriesInfo = this.mhs.get(this.options);
-    console.log(this.countriesInfo);
+    this.countriesInfo = await this.mhs.get(this.options);
+
+
+    for (const country of this.countriesInfo.data) {
+      this.countriesDetail.push({flag: country.flags.png, name: country.name.official});
+    }
+
   }
 
 }
