@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { DataService } from '../services/my-data.service';
 
 @Component({
   selector: 'app-all-countries',
@@ -11,9 +12,16 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 })
 export class AllCountriesPage implements OnInit {
 
-  constructor() { }
+  keyword: string = "";
+
+  constructor(private ds:DataService) { }
 
   ngOnInit() {
+    this.getKW();
+  }
+
+  async getKW() {
+    this. keyword = await this.ds.get('kw');
   }
 
 }
