@@ -13,7 +13,12 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   keyword: string = "";
+  selectedUnit: string = 'Metric';
   constructor(private router: Router, private ds:DataService) {}
+
+  ngOnInit() {
+    this.loadSelectedUnit();
+  }
 
   async openCountries() {
     await this.ds.set("kw", this. keyword);
@@ -24,5 +29,11 @@ export class HomePage {
     this.router.navigate(['/setting'])
   }
 
+  async loadSelectedUnit() {
+    const storedUnit = await this.ds.get('selectedUnit');
+    if (storedUnit) {
+      this.selectedUnit = storedUnit;
+    }
+  }
 
 }
