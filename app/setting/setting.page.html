@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Setting</ion-title>
+    <ion-button slot="end" color="danger" (click)="closeSetting()">X</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-select [(ngModel)]="selectedUnit" label="Selected unit:" label-placement="floating" fill="solid">
+    <ion-select-option value="Metric">Metric</ion-select-option>
+    <ion-select-option value="Scientific">Scientific</ion-select-option>
+    <ion-select-option value="Fahrenheit">Fahrenheit</ion-select-option>
+  </ion-select>
+</ion-content>
