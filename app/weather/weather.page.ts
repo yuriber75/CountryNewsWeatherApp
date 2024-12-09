@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonIcon, IonCardContent } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { DataService } from '../services/my-data.service';
 import { MyHttpService } from '../services/my-http.service';
 import { HttpOptions } from '@capacitor/core';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   selector: 'app-weather',
   templateUrl: './weather.page.html',
   standalone: true,
-  imports: [IonCardContent, IonIcon, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [ IonIcon, IonButton, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class WeatherPage implements OnInit {
 
@@ -89,4 +89,4 @@ export class WeatherPage implements OnInit {
 
 
 
-//https://api.weatherstack.com/current?access_key=841b13fc8f3fd919c2026be5463108ff&query=Rome&units=Metric
+//https://api.weatherstack.com/current?access_key=841b13fc8f3fd919c2026be5463108ff&query=Rome&units=m
