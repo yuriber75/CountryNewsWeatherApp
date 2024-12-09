@@ -1,13 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>weather</ion-title>
+    <ion-title>Weather for {{capital}}</ion-title>
+    <ion-button slot="end" color="success" (click)="goHomePage()">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">weather</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <img alt="icon weather" src="{{weatherIcons}}" />
+    <ion-card-header>
+      <ion-card-title> {{ weatherDescriptions }}</ion-card-title>
+      <ion-card-subtitle> {{ temperature }} {{ unitSymbol }}</ion-card-subtitle>
+    </ion-card-header>
+  
+  </ion-card>
 </ion-content>

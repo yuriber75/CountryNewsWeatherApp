@@ -29,7 +29,6 @@ export class NewsPage implements OnInit {
   constructor(private ds:DataService, private mhs: MyHttpService, private router: Router) { }
 
   ngOnInit() {
-    this.getNews();
   }
 
   ionViewWillEnter() {
@@ -62,7 +61,7 @@ export class NewsPage implements OnInit {
   
   }
 
-  async closeSetting(){
+  async goHomePage(){
     this.router.navigate(['/'])    
   }
 

@@ -29,7 +29,7 @@ export class SettingPage implements OnInit {
     }
   }
 
-  async closeSetting(){
+  async goHomePage(){
     await this.ds.set("selectedUnit", this.selectedUnit);
     this.router.navigate(['/'])    
   }
