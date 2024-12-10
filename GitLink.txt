@@ -1,0 +1,83 @@
+Mobile Applications Development
+Country, News & Weather App
+Assignment One 2024
+Student : G00439350@atu.ie
+
+-TypeScript 	72.6%
+-HTML		20.5%
+-SCSS		6.9%
+
+**** Ionic mobile application that reads country, weather, and news data from internet resources.  ****
+
+* Countries -> Using https://restcountries.com/
+* News      -> Using https://newsdata.io/
+* Weather   -> Using https://weatherstack.com/
+
+********************************************************************************************************
+
+GitHub -> yuriber75 > CountryNewsWeatherApp
+add Collaborator gerardharrisonatu
+https://github.com/yuriber75/CountryNewsWeatherApp
+
+Structure:
+
+G00439350/src/
+├── app/
+│   ├── app.component.html     		# 
+│   ├── app.component.scss     		# 
+│   ├── app.component.spec.ts   	# 
+│   ├── app.component.ts   		# 
+│   ├── app.routes.ts   		#
+│   ├── all-countries/
+│   │   ├── all-countries.page.html     # 
+│   │   └── all-countries.page.ts    	# 
+│   ├── home/
+│   │   ├── home.page.html  		# 
+│   │   └── home.page.ts	   	# 
+│   ├── news/
+│   │   ├── news.page.html 		# 
+│   │   └── news.page.ts   		# 
+│   ├── services/
+│   │   ├── my-data.service.ts		# 
+│   │   └── my-http.service.ts 		# 
+│   ├── setting/
+│   │   ├── setting.page.html		# 
+│   │   └── setting.page.ts		# 
+│   └── weather/
+│       ├── weather.page.html   	# 
+│       └── weather.page.ts		# 
+├── assets/
+│   ├── icon/
+│   │   └── favicon.png  		# 
+│   └── shapes.svg  			# 
+├── environments/
+│   ├── environment.prod.ts		# 
+│   └── environment.ts 			# 
+├── global.scss
+├── index.html
+├── main.ts
+├── polyfills.ts
+├── test.ts
+├── theme/
+│   └── variables.scss
+├── zone-flags.ts
+└── README.md    			# Project documentation
+
+Requirements Check List:
+1 Home Page ( student number, setting icon, user input)  ✅
+2 Setting Page (choice between unit systems) ✅
+3 Countries Page (retrieve from https://restcountries.com/ all countries with keyword ) ✅
+4 News Page (retrieve news from https://newsdata.io/) ✅
+5 Weather Page (retrieve weather forecast from https://weatherstack.com/) ✅
+
+Extra feature:
+1) Add home button in every page
+2) Image in news page set with 100% width 	
+
+ 
+ ********************************************
+ ************* end of document **************
+ *************                 **************
+ *************    Svetti©️      **************
+ ********************************************
+ 
